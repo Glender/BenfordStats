@@ -7,10 +7,10 @@
 first_digit(numbers)
 }
 \arguments{
-\item{numbers}{numeric}
+\item{numbers}{Numeric vector}
 }
 \value{
-numeric
+Numeric vector
 }
 \description{
 Extract the first digit from a numeric vector

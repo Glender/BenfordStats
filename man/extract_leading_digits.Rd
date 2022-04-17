@@ -7,7 +7,7 @@
 extract_leading_digits(numbers)
 }
 \arguments{
-\item{numbers}{numeric}
+\item{numbers}{Numeric vector}
 }
 \value{
 character

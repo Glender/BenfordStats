@@ -7,10 +7,10 @@
 first_two_digits(numbers)
 }
 \arguments{
-\item{numbers}{numeric}
+\item{numbers}{Numeric vector}
 }
 \value{
-numeric
+Numeric vector
 }
 \description{
 Extract the first two digits from a numeric vector

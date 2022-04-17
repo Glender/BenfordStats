@@ -32,7 +32,7 @@ to_scientific <- function(numbers) {
 
 #' Extract and return leading digits as characters
 #'
-#' @param numbers numeric
+#' @param numbers Numeric vector
 #'
 #' @return character
 extract_leading_digits <- function(numbers) {
@@ -50,9 +50,9 @@ extract_leading_digits <- function(numbers) {
 
 #' Extract the first digit from a numeric vector
 #'
-#' @param numbers numeric
+#' @param numbers Numeric vector
 #'
-#' @return numeric
+#' @return Numeric vector
 #' @export
 #'
 #' @examples
@@ -66,9 +66,9 @@ first_digit <- function(numbers) {
 
 #' Extract the first two digits from a numeric vector
 #'
-#' @param numbers numeric
+#' @param numbers Numeric vector
 #'
-#' @return numeric
+#' @return Numeric vector
 #' @export
 #'
 #' @examples
@@ -78,4 +78,36 @@ first_two_digits <- function(numbers) {
   numbers <- extract_leading_digits(numbers)
   return(as.numeric(first_two_digits_(numbers)))
 
+}
+
+
+#' Extract the last digit from a numeric vector
+#'
+#' @param numbers Numeric Vector
+#'
+#' @return numeric vector
+#' @export
+#'
+#' @examples
+#' last_digit(c(12, 3.141, 2.781, 0.998))
+last_digit <- function(numbers){
+  return(
+    as.numeric(stringr::str_sub(
+      numbers, nchar(numbers), nchar(numbers)
+    ))
+  )
+}
+
+#' Extract the last two digits from a numeric vector
+#'
+#' @param numbers Numeric Vector
+#'
+#' @return numeric vector
+#' @export
+last_two_digits <- function(numbers){
+  return(
+    as.numeric(stringr::str_sub(
+      numbers, nchar(numbers) - 1, nchar(numbers)
+    ))
+  )
 }

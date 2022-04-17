@@ -2,4 +2,9 @@
 
 export(first_digit)
 export(first_two_digits)
+export(last_digit)
+export(last_two_digits)
+export(prob_first_digit)
+export(prob_first_two_digits)
+export(second_order_transf)
 export(to_scientific)
