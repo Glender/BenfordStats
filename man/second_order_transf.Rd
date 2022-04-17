@@ -4,10 +4,12 @@
 \alias{second_order_transf}
 \title{Second-Order Transformation to create Benford Set}
 \usage{
-second_order_transf(numbers)
+second_order_transf(numbers, const_multiplier = 10^6)
 }
 \arguments{
 \item{numbers}{Numeric Vector}
+
+\item{const_multiplier}{Integer. Constant used to multiply the sorted differences.}
 }
 \value{
 Numeric vector
@@ -16,7 +18,7 @@ Numeric vector
 From some data distributions it is expected that they don't follow
 Benford's Law. In such cases it is annying that you can't use Benford's
 Law to evaluate the data. However, after ordering and taking the differences
-between these numbers, the transformed data should conform to Benford's Law.
+between these numbers and multiplying with a constant, the transformed data should conform to Benford's Law.
 }
 \details{
 This transformation can be applied to Normal, Uniform, Gamma and Triangular Distributions.
